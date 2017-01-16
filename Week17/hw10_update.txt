@@ -1,0 +1,13 @@
+*** homework 10 update ***
+The bug with 
+ apply(Matrix const & m, ConvexPolygon const & cp) 
+changing the value of cp (the xecond parameter)
+is due to ConvexPolygon not having a copy constructor.
+
+To fix it, add this copy constructor to class ConvexPolygon:
+
+    ConvexPolygon(ConvexPolygon const & cp)
+    :n(cp.n),v(new Vector[cp.n]){
+        for (int i=0; i<n; ++i)
+            v[i] = cp.v[i];
+    }

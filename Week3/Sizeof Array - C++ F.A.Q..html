@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/ -->
+<html data-livestyle-extension="available" class="gr__cplusplus_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Sizeof Array - C++ F.A.Q.</title>
+<link rel="canonical" href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.cplusplus.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./Sizeof Array - C++ F.A.Q._files/main.css">
+<script type="text/javascript" async="" src="./Sizeof Array - C++ F.A.Q._files/ga.js.下載"></script><script src="./Sizeof Array - C++ F.A.Q._files/main.js.下載" type="text/javascript"></script>
+<script>
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script><script src="./Sizeof Array - C++ F.A.Q._files/gpt.js.下載"></script><script id="gpt-impl-0.20283345892041083" src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_107.js"></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-5/html/container.html">
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/32882001/L', [728, 90], 'div-gpt-ad-1473193443042-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script>
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="I_top">
+<div id="I_header">
+<div id="I_logo"><a href="http://www.cplusplus.com/" title="cplusplus.com"><div></div></a></div>
+<div id="I_search">
+<form id="search" action="http://www.cplusplus.com/search.do" method="get">
+Search: <input name="q" size="20" class="txt"> <input type="submit" value="Go" class="btn">
+</form>
+</div>
+<div id="I_bar">
+<ul>
+<li><a href="http://www.cplusplus.com/faq/">F.A.Q.</a></li>
+<li><a href="http://www.cplusplus.com/faq/sequences/">Arrays, Strings, etc</a></li>
+<li><a href="http://www.cplusplus.com/faq/sequences/arrays/">Arrays</a></li>
+<li class="here">Sizeof Array</li>
+</ul>
+</div>
+<div id="I_user" class="C_LoginBox"><span title="ajax"></span><div id="I_corner" style="display: block;"><div id="I_cornerinner"><div id="I_userid">Not logged in</div></div></div><div id="I_userbuttons"><a href="http://www.cplusplus.com/user/access.cgi?w=signup">register</a><a id="I_btnlogin" href="javascript:LBI_user.modal(1)">log in</a></div><div id="I_fold" style="display: none;"><div class="deco"></div><form name="I_loginform" id="I_loginform" action="http://www.cplusplus.com/user/access.cgi" onsubmit="LBI_user.login(); return false;" method="post" style="display: none;"><div class="fields"><input type="hidden" name="w" value="login"><input type="hidden" name="y" value="1"><input type="hidden" name="to" value="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/">user name: <input class="txt" name="l" size="8" type="text" title="Type user name"><br>password: <input class="txt" name="p" size="8" type="password" title="Type password"><br><input class="chk" name="rememberme" id="rememberme" value="1" type="checkbox"><label for="rememberme">remember me</label>&nbsp;<input class="btn" value="sign in" type="submit"><br><div class="forgot"><a href="http://www.cplusplus.com/user/access.cgi?w=lostpass">forgot your password?</a></div></div><div class="openid">or sign in using:<br><a class="google" href="http://www.cplusplus.com/user/access.cgi?w=login&amp;y=1&amp;pr=google&amp;to=%2Ffaq%2Fsequences%2Farrays%2Fsizeof-array%2F" title="Sign in using your google account"><span></span></a><a class="yahoo" href="http://www.cplusplus.com/user/access.cgi?w=login&amp;y=1&amp;pr=yahoo&amp;to=%2Ffaq%2Fsequences%2Farrays%2Fsizeof-array%2F" title="Sign in using your Yahoo! account"><span></span></a> </div></form><div id="I_loginwait" style="display: none;"></div><div id="I_loginfail" style="display: none;"><div id="I_loginfailtext"></div><a class="C_bRepeat" href="javascript:LBI_user.modal(1)">try again</a><a class="C_bCancel" href="javascript:LBI_user.modal(0)">cancel</a><div class="forgot"><a href="http://www.cplusplus.com/user/access.cgi?w=lostpass">forgot your password?</a></div></div><div class="close"><a href="javascript:LBI_user.modal(0)" title="cancel log in"><span></span></a></div></div></div>
+</div>
+</div>
+<div id="I_mid">
+<div id="I_wrap">
+<div id="I_minheight" style="height: 809px;"></div>
+<div id="I_main">
+<div class="C_support">
+<div id="div-gpt-ad-1473193443042-0" style="height:90px; width:728px;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1473193443042-0'); });
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=1726802207735693&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809080%2C21060093&amp;sc=0&amp;sfv=1-0-5&amp;iu_parts=32882001%2CL&amp;enc_prev_ius=%2F0%2F1&amp;prev_iu_szs=728x90&amp;cookie_enabled=1&amp;lmt=1390527950&amp;dt=1482555215629&amp;cc=7&amp;frm=20&amp;biw=1920&amp;bih=939&amp;oid=3&amp;adxs=0&amp;adys=0&amp;adks=587396845&amp;gut=v2&amp;ifi=1&amp;u_tz=480&amp;u_his=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_nplug=4&amp;u_nmime=5&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fwww.cplusplus.com%2Ffaq%2Fsequences%2Farrays%2Fsizeof-array%2F&amp;ref=http%3A%2F%2Fwww.cc.ntut.edu.tw%2F~yccheng%2Foop2016s%2FOOP.html&amp;dssz=6&amp;icsg=58&amp;std=0&amp;csl=86&amp;vrg=107&amp;vrp=107&amp;ga_vid=1067966157.1477401271&amp;ga_sid=1482555216&amp;ga_hid=930294680&amp;ga_fc=true" id="sae-script-1"></script>
+</div>
+</div>
+<div id="I_content">
+<div class="C_doc">
+<h1>Sizeof Array</h1>
+<br>
+So, you want to know how many elements there are in your array? This is a tricky subject.<br>
+<br>
+Before we go any further, you should be familiar with the concepts discussed in <a href="http://www.cplusplus.com/faq/sequences/strings/c-strings-and-pointers/">c-strings and pointers</a>. It is also worth your time to read through the <a href="http://www.cplusplus.com/doc/tutorial/arrays/">tutorial on arrays</a>.<br>
+<br>
+A beginner will often try something along the lines of <span class="auto"><code class="source">size = <var>sizeof</var>( myarray )</code></span> (which is incorrect). The more experienced programmers will often go for the <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#c">C approach</a> (discussed below), because they do not know the <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp">C++ approach</a>. Here we will explore both C and C++ approaches, and why the <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp">C++ approach</a> is superior.<br>
+<br>
+But first:<br>
+<ul>
+  <li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#rationale">           Rationale                </a></li>
+  <li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#basics">              The Basics               </a></li>
+  <li>                                SizeOfArray()<br>
+  <ul>
+  <li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp">                 C++                      </a></li>
+  <li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp11">               C++11                    </a></li>
+  <li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#std_array">           std::array               </a></li>
+  <li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#c">                   C                        </a></li>
+  </ul>
+  </li><li><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#multiple-dimensions"> Multiple Dimensions      </a></li>
+</ul>
+<br>
+<h3><a name="rationale"></a> Rationale <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#rationale"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+There are two broad classes of reasons to want to have some kind of method to return information about your array:<br>
+<ul>
+  <li><b> You think the <a href="http://en.wikipedia.org/wiki/One_Definition_Rule">One Definition Rule</a> should apply to the dimensions of each rank of an array</b>.<br>
+  The traditional, C way to do this is to declare the size of each rank (or dimension) using a named constant or macro:<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;iostream&gt;</dfn>
+
+<var>int</var> main()
+{
+  <var>const</var> size_t ROWS = 3;
+  <var>const</var> size_t COLS = 4;
+  <var>double</var> M[ ROWS ][ COLS ];
+
+  std::cout &lt;&lt; <kbd>"M is a "</kbd> &lt;&lt; ROWS &lt;&lt; <kbd>" by "</kbd> &lt;&lt; COLS &lt;&lt; <kbd>" matrix.\n"</kbd>;
+
+  <var>return</var> 0;
+}</code></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+This is actually a very simple, smart way to keep this information. Unless you tell it not to, the compiler will optimize <code>ROWS</code> and <code>COLS</code> out of existence. It does, however, seem to use up a lot of space for a single array’s definition.<br>&nbsp;</li>
+  <li><b>You want to pass a multi-dimensional array with variable rank dimensions (the size of each dimension) to a function, and use it in the function normally</b>.<br>
+  C and C++ require you to specify the size of each dimension of an array except the first, or major, one. You can use this information when you pass such an array to a function:<br>
+<br>
+<table class="">
+  <tbody><tr><td><div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;iostream&gt;</dfn>
+<var>using</var> <var>namespace</var> std;
+
+<var>void</var> print( <var>int</var> a[][ 4 ], size_t n )
+{
+  <var>for</var> (size_t i = 0; i &lt; n; i++)
+  {
+    <var>for</var> (size_t j = 0; j &lt; 4; j++)
+    {
+      cout &lt;&lt; a[ i ][ j ] &lt;&lt; <kbd>" "</kbd>;
+    }
+    cout &lt;&lt; endl;
+  }
+}</code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+</td><td><div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br></code></pre></td>
+<td class="source"><pre><code>
+<var>int</var> main()
+{
+  <var>int</var> M[ 3 ][ 4 ] =                 
+  {
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 1, 0 }
+  };
+
+  print( M, 3 );
+
+  <var>return</var> 0;
+}</code></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<br>
+The problem, of course, is that this limits the function considerably. While it does not matter how long the major dimension is, the exact size of the minor dimensions <i>do</i> matter. I cannot, for example, pass a 3 by 3 array to the <code>print()</code> function.<br>
+<br>
+It is more desirable to be able to simply say that the array has two ranks (or dimensions), regardless of the size of each dimension, and still be able to use it like an array inside the function.<br>
+</li>
+</ul>
+This FAQ deals primarily with handling the first situation without having to explicitly name constant variables for each rank’s size. We want, essentially, to be able to say:<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br></code></pre></td>
+<td class="source"><pre><code>  <var>int</var> primes7[] = { 2, 3, 5, 7, 11, 13, 17 };
+  cout &lt;&lt; <kbd>"There are "</kbd> &lt;&lt; SizeOfArray( primes7 ) &lt;&lt; <kbd>" primes in 'primes7[]'.\n"</kbd>;</code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+<br>
+We will deal with the second situation in the next couple of FAQs. So, with that in mind, let’s dig-in!<br>
+<br>
+<h3><a name="basics"></a> The Basics <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#basics"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+Firstly, the <code>sizeof()</code> operator does not give you the number of elements in an array, it gives you the <i>number of bytes</i> a thing occupies in memory. Hence:<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;stdio.h&gt;</dfn>
+
+<var>int</var> main()
+{
+  <var>char</var> s[] = { 1, 2, 3, 4, 5, 0 };
+  <var>int</var> xs[] = { 1, 2, 3, 4, 5, 0 };
+
+  printf( <kbd>"sizeof( s ) = %d\n"</kbd>,  <var>sizeof</var>( s  ) );
+  printf( <kbd>"sizeof( xs ) = %d\n"</kbd>, <var>sizeof</var>( xs ) );
+
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>sizeof( s ) = 6
+sizeof( xs ) = 24</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+This causes some confusion, because the first time many beginners try to use <code>sizeof()</code> is often with a character string, and a <code>char</code> is <i>always</i> one byte long. An <code>int</code>, however, will be something different. (The actual size depends on your computer. On mine, an <code>int</code> is four bytes long, and six four-byte elements is 24 bytes total.)<br>
+<br>
+Secondly, an array type will degenerate into a pointer type at <i>every</i> opportunity. The difference is that an array type knows all about the array, including its dimensions, whereas a pointer type only knows the address of the one thing it is pointing at. Here is an example to explain (you may have seen this, right?):<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;stdio.h&gt;</dfn>
+
+<var>void</var> f( <var>const</var> <var>char</var> s[] )
+{
+  printf( <kbd>"The size of f()'s     (s) is %d\n"</kbd>, <var>sizeof</var>( s ) );  
+}
+
+<var>int</var> main()
+{
+  <var>const</var> <var>char</var> s[] = <kbd>"Hello world!"</kbd>;
+  printf( <kbd>"s = \"%s\"\n"</kbd>, s );
+  printf( <kbd>"The size of main()'s  (s) is %d\n"</kbd>, <var>sizeof</var>( s ) );
+  f( s );
+  printf( <kbd>"The size of main()'s (&amp;s) is %d\n"</kbd>, <var>sizeof</var>( &amp;s ) );
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>s = "Hello world!"
+The size of main()'s  (s) is 13
+The size of f()'s     (s) is 4
+The size of main()'s (&amp;s) is 4</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+So, what happened?<br>
+<br>
+In <code>main()</code>, the variable ‘s’ is an <i>array</i>, meaning it has all that useful information attached to it, like its size in memory. The example string is thirteen characters long (and hence, thirteen bytes long).<br>
+<br>
+But when we pass it to the function <code>f()</code>, it is no longer an array, it is a <i>pointer</i>. Likewise, you get the same result by directly converting the array to a pointer (line 14). On my 32-bit operating system, a pointer is 4 bytes long. Your results might vary.<br>
+<br>
+This is often surprising to beginners because the syntax <code>const char s[]</code> only means ‘an array’ when it is <i>not</i> a function argument. When it is, it is the same as saying <code>const char* s</code>, <i>even if you do specify a dimension</i>:<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;stdio.h&gt;</dfn>
+
+<var>void</var> f( <var>const</var> <var>char</var> s[ 3 ] )
+{
+  printf( <kbd>"s[ 3 ] = \"%s\"\n"</kbd>, s );
+}
+
+<var>int</var> main()
+{
+  f( <kbd>"Hello world!"</kbd> );
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>s[ 3 ] = "Hello world!"</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+How we handle this differs between C and C++.<br>
+<br>
+<h3><a name="cpp"></a> C++ <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+The first thing to do is not let the array degenerate into a pointer, if possible. The second is to get the <i>length</i> of the array instead of its <i>size in memory</i>.<br>
+<br>
+C++ makes this simple using the power of templates. Here is a function that returns the length of the argument array.<br>
+<br>
+<table class="">
+  <tbody><tr><td rowspan="2"><div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br></code></pre></td>
+<td class="source"><pre><code><var>template</var> &lt;<var>typename</var> T, size_t N&gt;
+<var>inline</var>
+size_t SizeOfArray( <var>const</var> T(&amp;)[ N ] )
+{
+  <var>return</var> N;
+}</code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+</td><td><small>
+Yes, I know that the argument syntax here is confusingly wonky. What it says is that the (unnamed) argument is a <i>reference</i> (<code>&amp;</code>) to an array of N elements <code>[ N ]</code> of type <code>const T</code>.<br>
+<br>
+Some compilers (like the GCC) still choke on any effort to make the reference itself <b>const</b>, but it really doesn’t matter here, since the array is referenced as immutable anyway...<br>
+</small></td></tr>
+  <tr><td></td></tr>
+</tbody></table>
+<br>
+Now, as long as I am still handling an array (and not a pointer), I can get its length by simply using the <code>SizeOfArray()</code> function:<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;iostream&gt;</dfn>
+<var>using</var> <var>namespace</var> std;
+
+<var>template</var> &lt;<var>typename</var> T, size_t N&gt;
+<var>inline</var>
+size_t SizeOfArray( <var>const</var> T(&amp;)[ N ] )
+{
+  <var>return</var> N;
+}
+
+<var>int</var> main()
+{
+  <var>const</var> <var>char</var> s[] = <kbd>"Hello world!"</kbd>;
+
+  cout &lt;&lt; <kbd>"s[] is "</kbd> &lt;&lt; SizeOfArray( s )
+       &lt;&lt; <kbd>" characters long.\n"</kbd>;
+  cout &lt;&lt; <kbd>"(That includes the null at the end.)\n"</kbd>;
+
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>s[] is 13 characters long.
+(That includes the null at the end.)</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+The nice thing about this approach is that it <i>will not compile</i> if you try to use a pointer:<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br></code></pre></td>
+<td class="source"><pre><code>  <var>const</var> <var>char</var>* s = <kbd>"Hello world!"</kbd>;
+  cout &lt;&lt; <kbd>"s is "</kbd> &lt;&lt; SizeOfArray( s )  <cite>// foo, 's' is a pointer</cite>
+       &lt;&lt; <kbd>" characters long.\n"</kbd>;</code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+<br>
+The other nice thing is that, if your compiler does its job properly, the compiler will optimize that function out of existence and just plug the actual length of the array in your code where you call it. Neat, huh?<br>
+<br>
+<h4><a name="cpp-vla"></a> variable-length arrays <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp-vla"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h4>
+Immediately after authoring this page, someone on the forum tried to use <code>SizeOfArray()</code> like this:<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br></code></pre></td>
+<td class="source"><pre><code>  <var>int</var>   ii[ 42 ];
+  <var>float</var> ff[ SizeOfArray( ii ) ];
+
+  cout &lt;&lt; <kbd>"ii.length = "</kbd> &lt;&lt; SizeOfArray( ii ) &lt;&lt; endl;
+  cout &lt;&lt; <kbd>"ff.length = "</kbd> &lt;&lt; SizeOfArray( ff ) &lt;&lt; endl;  <cite>/* ERROR! */</cite></code></pre></td>
+<td class="output"><pre><samp>
+&lt;-- Line 2 is NON-STANDARD</samp></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+<br>
+Not surprisingly, it didn’t work. <b><i>Variable length arrays are not legal in C++.</i></b> Compilers that allow it, like the GCC, do so with various hacks. But, since you already know the length of the array, why do you need to ask for it another way? Just use what you already know.<br>
+<br>
+VLAs <i>are</i> legal in C99, and the <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#c">C method</a> works just fine with them.<br>
+<br>
+<h3><a name="cpp11"></a> C++11 <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#cpp11"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+The <code>SizeOfArray()</code> function we have written so far works just fine. However, there is another way to get that information in C++11.<br>
+<br>
+The <a href="http://www.cplusplus.com/reference/type_traits/">&lt;type_traits&gt;</a> header provides a number of classes for inspecting array types. Let’s use them:<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;cstddef&gt;</dfn>
+<dfn>#include &lt;type_traits&gt;</dfn>
+
+<var>template</var> &lt;<var>typename</var> A&gt;
+<var>typename</var> std::enable_if &lt;std::is_array &lt;A&gt; ::value, size_t&gt; ::type
+SizeOfArray( <var>const</var> A&amp; a )
+{
+  <var>return</var> std::extent &lt;A&gt; ::value;
+}</code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+<br>
+This does the same thing as what we already have, only it produces an unfamiliar error message because we use the fancy new <a href="http://www.cplusplus.com/reference/type_traits/enable_if/"><code>std::enable_if</code></a> type to force the return type of the function to <i>exist only if</i> the template argument ‘A’ is an array type. The <a href="http://www.cplusplus.com/reference/type_traits/extent/"><code>std::extent</code></a> type returns the dimension of a given rank of an array (in this case, it defaults to the first rank).<br>
+<br>
+You can also use <code>std::extent</code> directly and skip the SizeOfArray() function:<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;iostream&gt;</dfn>
+<dfn>#include &lt;type_traits&gt;</dfn>
+<var>using</var> <var>namespace</var> std;
+
+<var>int</var> main()
+{
+  <var>int</var> five_primes[] = { 2, 3, 5, 7, 11 };
+  cout &lt;&lt; <kbd>"five_primes[ "</kbd>
+       &lt;&lt; extent &lt;<var>decltype</var>( five_primes )&gt; ::value
+       &lt;&lt; <kbd>" ] = { "</kbd>;
+  <var>for</var> (<var>int</var> x: five_primes) cout &lt;&lt; x &lt;&lt; <kbd>", "</kbd>;
+  cout &lt;&lt; <kbd>"\b\b };\n"</kbd>;
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>five_primes[ 5 ] = { 2, 3, 5, 7, 11 };</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+The <code>std::extent</code> template returns zero if the object given it is not an array.<br>
+<br>
+<h3><a name="std_array"></a> std::array <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#std_array"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+The new C++11 <code>std::array</code> class provides a lot of STL sequence container information about your array, including its <code>size()</code>.<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;array&gt;</dfn>
+<dfn>#include &lt;iostream&gt;</dfn>
+<var>using</var> <var>namespace</var> std;
+
+<var>int</var> main()
+{
+  array &lt;<var>char</var>, 13&gt; s = {<kbd>"Hello world!"</kbd>};
+
+  cout &lt;&lt; <kbd>"s[] = \""</kbd> &lt;&lt; s.data() &lt;&lt; <kbd>"\"\n"</kbd>;
+  cout &lt;&lt; <kbd>"s[] is "</kbd> &lt;&lt; s.size() &lt;&lt; <kbd>" characters long.\n"</kbd>;
+  cout &lt;&lt; <kbd>"(That includes the null at the end.)\n"</kbd>;
+
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>s[] = "Hello world!"
+s[] is 13 characters long.
+(That includes the null at the end.)</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+The <code>std::array</code> class has several important characteristics, including the fact that it <i>will not</i> automatically degenerate to a pointer. (We had to use the <code>data()</code> member function to do that.)<br>
+<br>
+However, as the dimension of the array (the size of its rank) is encoded into the type (as a template argument), we are stuck when we wish to pass <i>variable</i>-length arrays to a function.<br>
+<br>
+<h3><a name="c"></a> C <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#c"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+In C, there is no way to have a compile-time safe way to do this. There is, however, a common macro to do it.<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>&nbsp;</code></pre></td>
+<td class="source"><pre><code><dfn>#define SIZEOF_ARRAY( a ) (sizeof( a ) / sizeof( a[ 0 ] )) </dfn></code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+<br>
+It simply uses a little math and takes the size of the array in memory and divides that by the size of a single element in the array, which equals the number of elements in the array.<br>
+<br>
+You use it very much the same: make sure you have an array (and not a pointer) and use the macro:<br>
+<br>
+<div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;stdio.h&gt;</dfn>
+
+<dfn>#define SIZEOF_ARRAY( a ) (sizeof( a ) / sizeof( a[ 0 ] ))</dfn>
+
+<var>int</var> main()
+{
+  <var>const</var> <var>char</var> s[] = <kbd>"Hello world!"</kbd>;
+  printf( <kbd>"s[] is %d characters long\n"</kbd>, SIZEOF_ARRAY( s ) );
+  printf( <kbd>"(That includes the null at the end.)\n"</kbd> );
+  <var>return</var> 0;
+}</code></pre></td>
+<td class="output"><pre><samp>s[] is 13 characters long
+(That includes the null at the end.)</samp></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+The C++ way is superior simply because it catches any errors you make – you <i>must</i> pass an array to the function, whereas the existing C method does not. Some people will also complain that the C way uses a macro, but it really isn’t an issue here (because you <i>must</i> pass an array as argument, and nothing else). There is no compile-time check to enforce this, though.<br>
+<br>
+<h3><a name="multiple-dimensions"></a> Multiple Dimensions <a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#multiple-dimensions"><img src="./Sizeof Array - C++ F.A.Q._files/link.png" alt=""></a></h3>
+Thus far we have only dealt with arrays with <i>one</i> dimension. It’s time to dig a little deeper.<br>
+<br>
+The first observation we need to make is that the above methods already work on multidimensional arrays! The trick, of course, is that it will only return the length of the outermost dimension.<br>
+<br>
+<table class="">
+  <tbody><tr><td><code>&nbsp;&nbsp;&nbsp;</code>C++<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;iostream&gt;</dfn>
+
+<var>template</var> &lt;<var>typename</var> T, size_t N&gt; <var>inline</var>
+size_t SizeOfArray( <var>const</var> T(&amp;)[ N ] )
+{
+  <var>return</var> N;
+}
+
+<var>int</var> main()
+{
+  <var>int</var> M[ 3 ][ 4 ] =
+  {
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 1, 0 }
+  };
+  std::cout &lt;&lt; <kbd>"M[ m ][ n ], m = "</kbd>
+    &lt;&lt; SizeOfArray( M ) &lt;&lt; <kbd>"\n"</kbd>;
+
+
+  <var>return</var> 0;
+}</code></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+</td><td><code>&nbsp;&nbsp;&nbsp;</code>C<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br></code></pre></td>
+<td class="source"><pre><code><dfn>#include &lt;stdio.h&gt;</dfn>
+
+<dfn>#define SIZEOF_ARRAY( a ) \
+  (sizeof( a ) / sizeof( a[ 0 ] ))</dfn>
+
+
+
+
+<var>int</var> main()
+{
+  <var>int</var> M[ 3 ][ 4 ] =
+  {
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 1, 0 }
+  };
+  printf( <kbd>"M[ m ][ n ], m = %d\n"</kbd>,
+    SIZEOF_ARRAY( M ) );
+
+
+  <var>return</var> 0;
+}</code></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+</td><td> Output<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="output"><pre><samp>M[ m ][ n ], m = 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</samp></pre></td></tr></tbody></table></div></td></tr>
+</tbody></table>
+<br>
+The next observation to make is that you can apply the same trick to the next dimension. Go ahead and add the following lines to the code above:<br>
+<br>
+<table class="">
+  <tbody><tr><td><div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>19<br>20<br></code></pre></td>
+<td class="source"><pre><code>  std::cout &lt;&lt; <kbd>"M[ m ][ n ], n = "</kbd>
+    &lt;&lt; SizeOfArray( M[ 0 ] ) &lt;&lt; <kbd>"\n"</kbd>; </code></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+</td><td><div class="auto"><table class="split"><tbody><tr><td class="rownum"><pre><code>19<br>20<br></code></pre></td>
+<td class="source"><pre><code>  printf( <kbd>"M[ m ][ n ], m = %d\n"</kbd>,
+    SIZEOF_ARRAY( M[ 0 ] ) );</code></pre></td>
+<td class="output"><pre><samp>M[ m ][ n ], m = 3
+M[ m ][ n ], n = 4</samp></pre></td><td class="C_btnholder"></td></tr></tbody></table></div>
+</td></tr>
+</tbody></table>
+<br>
+The final observation to make is that a single element of any array has a size of <i>one element</i>. This is a given. So, if you try to use <code>SIZEOF_ARRAY()</code> on an element (which is technically not an array), the answer you get will be <i>one</i>. The <code>SizeOfArray()</code> template function will not compile when given an element (but we can work this out with a little function overloading).<br>
+<br>
+So, with that knowledge in hand, let us move on to the next couple of FAQs: <a href="http://www.cplusplus.com/faq/sequences/arrays/ndimensional-argument/">Pass my (N-dimensional) array to a function?</a> and <a href="http://www.cplusplus.com/faq/sequences/arrays/any-ndimensional-argument/">Pass <i>any</i> (N-dimensional) array to a single function?</a>.<br>
+<br></div><div id="CH_bb"></div></div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-1444228343479937";
+    google_ad_slot = "9701143201";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- leaderboard -->
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div id="I_nav">
+<div class="sect root">
+<h3><b><a href="http://www.cplusplus.com/">C++</a></b></h3>
+<ul>
+<li class="folder info"><a href="http://www.cplusplus.com/info/">Information</a></li>
+<li class="folder doc"><a href="http://www.cplusplus.com/doc/">Tutorials</a></li>
+<li class="folder reference"><a href="http://www.cplusplus.com/reference/">Reference</a></li>
+<li class="folder articles"><a href="http://www.cplusplus.com/articles/">Articles</a></li>
+<li class="folder forum"><a href="http://www.cplusplus.com/forum/">Forum</a></li>
+</ul>
+</div>
+<div class="C_BoxLabels C_BoxSort sect" id="faq_box">
+<h3><div class="toggle_on" title="Sort alphabetically"></div><b><a href="http://www.cplusplus.com/faq/">F.A.Q.</a></b></h3>
+<ul style="display: block;">
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/intro/"><span>Introduction to C++</span></a></li>
+<li class="selected folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/"><span>Arrays, Strings, etc</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/beginners/"><span>Beginners, Homework</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/compiling/"><span>Compiling / Linking</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/numbers/"><span>Dealing with Numbers</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/functions/"><span>Functions, Arguments, Return Values</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/graphics/"><span>Images, Graphics and GUIs</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/io/"><span>Input and Output</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/style/"><span>Language and Style</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/processes/"><span>Parent / Child / Processes</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/console/"><span>Working with the Console</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/misc/"><span>Miscellaneous</span></a></li>
+</ul>
+<ul style="display: none;"><li class="selected folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/"><span>Arrays, Strings, etc</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/beginners/"><span>Beginners, Homework</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/compiling/"><span>Compiling / Linking</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/numbers/"><span>Dealing with Numbers</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/functions/"><span>Functions, Arguments, Return Values</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/graphics/"><span>Images, Graphics and GUIs</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/io/"><span>Input and Output</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/intro/"><span>Introduction to C++</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/style/"><span>Language and Style</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/misc/"><span>Miscellaneous</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/processes/"><span>Parent / Child / Processes</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/console/"><span>Working with the Console</span></a></li></ul></div>
+<div class="C_BoxLabels C_BoxSort sect" id="sequences_box">
+<h3><div class="toggle_on" title="Sort alphabetically"></div><b><a href="http://www.cplusplus.com/faq/sequences/">Arrays, Strings, etc</a></b></h3>
+<ul style="display: block;">
+<li class="selected folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/arrays/"><span>Arrays</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/strings/"><span>Strings</span></a></li>
+<li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/sequencing/"><span>Sequencing</span></a></li>
+</ul>
+<ul style="display: none;"><li class="selected folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/arrays/"><span>Arrays</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/sequencing/"><span>Sequencing</span></a></li><li class="folder"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/strings/"><span>Strings</span></a></li></ul></div>
+<div class="C_BoxLabels C_BoxSort sect" id="arrays_box">
+<h3><b><a href="http://www.cplusplus.com/faq/sequences/arrays/">Arrays</a></b></h3>
+<ul>
+<li class="selected"><div class="label"><div></div></div><a href="http://www.cplusplus.com/faq/sequences/arrays/sizeof-array/"><span>Sizeof Array</span></a></li>
+</ul>
+</div>
+<div id="I_subnav"></div>
+<div class="C_ad234">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7688470879129516";
+google_ad_slot = "7445514729";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></div>
+<div id="I_midclear"></div>
+</div>
+</div>
+<div id="I_bottom">
+<div id="I_footer">
+	<a href="http://www.cplusplus.com/">Home page</a> | <a href="http://www.cplusplus.com/privacy.do">Privacy policy</a><br>© cplusplus.com, 2000-2016 - All rights reserved - <i>v3.1</i><br><a href="http://www.cplusplus.com/contact.do?referrer=www.cplusplus.com%2Ffaq%2Fsequences%2Farrays%2Fsizeof-array%2F">Spotted an error? contact us</a>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+ onSession ( function(us) {
+		el=document.getElementById('CH_bb'); el.innerHTML='';
+		if (us.auth(4096)) {
+			
+			el.appendChild(btn('Edit Page','Edit Page','edit','/faq/edit.cgi?a=sequences+arrays+sizeof-array'));
+			el.appendChild(btn('Delete Page','Delete Page','delete','javascript:docdel()'));
+		}
+	});
+	function docdel() { if (confirm('WARNING: You are about to delete this page. Confirm?')) window.location='/faq/delete.cgi?a=sequences+arrays+sizeof-array'; }
+	ready();
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-521783-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+//-->
+</script>
+
+<script>
+(function(){
+  // mini cookie-consent code (c) Juan Soulie, 2016
+  var s ='consent=cookie';
+  var e = document.createElement('div');
+  e.innerHTML = '<div style="background:#eed;padding:10px;margin:0;text-align:center;border-bottom:1px solid #446"><span style="color:#210;font-weight:bold">This website uses cookies. By continuing, you give permission to deploy cookies, as detailed in our <a href="/privacy.do">privacy policy</a>.</span> <span style="margin-left:10px;border-radius:5px;padding:1px 10px;background:#bcd;border:1px solid #789;cursor:pointer">ok</span></div>';
+  if (document.cookie.indexOf(s)!==-1) return;
+  var b = document.getElementsByTagName('body')[0];
+  b.insertBefore(e,b.firstChild);
+  var x = function() { document.cookie = s+'; path=/'; e.parentNode.removeChild(e); };
+  e.addEventListener('click',x);
+  document.addEventListener('scroll',x);
+})();
+</script>
+
+
+</body></html>

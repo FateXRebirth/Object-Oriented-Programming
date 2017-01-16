@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.cplusplus.com/reference/algorithm/sort/ -->
+<html data-livestyle-extension="available" class="gr__cplusplus_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>sort - C++ Reference</title>
+<link rel="canonical" href="http://www.cplusplus.com/reference/algorithm/sort/">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.cplusplus.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./sort - C++ Reference_files/main.css">
+<script type="text/javascript" async="" src="./sort - C++ Reference_files/ga.js.下載"></script><script src="./sort - C++ Reference_files/main.js.下載" type="text/javascript"></script>
+<script>
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script><script src="./sort - C++ Reference_files/gpt.js.下載"></script><script id="gpt-impl-0.4207157255076799" src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_107.js"></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-5/html/container.html">
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/32882001/L', [728, 90], 'div-gpt-ad-1473193443042-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script>
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="I_top">
+<div id="I_header">
+<div id="I_logo"><a href="http://www.cplusplus.com/" title="cplusplus.com"><div></div></a></div>
+<div id="I_search">
+<form id="search" action="http://www.cplusplus.com/search.do" method="get">
+Search: <input name="q" size="20" class="txt"> <input type="submit" value="Go" class="btn">
+</form>
+</div>
+<div id="I_bar">
+<ul>
+<li><a href="http://www.cplusplus.com/reference/">Reference</a></li>
+<li><a href="http://www.cplusplus.com/reference/algorithm/">&lt;algorithm&gt;</a></li>
+<li class="here">sort</li>
+</ul>
+</div>
+<div id="I_user" class="C_LoginBox"><span title="ajax"></span><div id="I_corner" style="display: block;"><div id="I_cornerinner"><div id="I_userid">Not logged in</div></div></div><div id="I_userbuttons"><a href="http://www.cplusplus.com/user/access.cgi?w=signup">register</a><a id="I_btnlogin" href="javascript:LBI_user.modal(1)">log in</a></div><div id="I_fold" style="display: none;"><div class="deco"></div><form name="I_loginform" id="I_loginform" action="http://www.cplusplus.com/user/access.cgi" onsubmit="LBI_user.login(); return false;" method="post" style="display: none;"><div class="fields"><input type="hidden" name="w" value="login"><input type="hidden" name="y" value="1"><input type="hidden" name="to" value="http://www.cplusplus.com/reference/algorithm/sort/">user name: <input class="txt" name="l" size="8" type="text" title="Type user name"><br>password: <input class="txt" name="p" size="8" type="password" title="Type password"><br><input class="chk" name="rememberme" id="rememberme" value="1" type="checkbox"><label for="rememberme">remember me</label>&nbsp;<input class="btn" value="sign in" type="submit"><br><div class="forgot"><a href="http://www.cplusplus.com/user/access.cgi?w=lostpass">forgot your password?</a></div></div><div class="openid">or sign in using:<br><a class="google" href="http://www.cplusplus.com/user/access.cgi?w=login&amp;y=1&amp;pr=google&amp;to=%2Freference%2Falgorithm%2Fsort%2F" title="Sign in using your google account"><span></span></a><a class="yahoo" href="http://www.cplusplus.com/user/access.cgi?w=login&amp;y=1&amp;pr=yahoo&amp;to=%2Freference%2Falgorithm%2Fsort%2F" title="Sign in using your Yahoo! account"><span></span></a> </div></form><div id="I_loginwait" style="display: none;"></div><div id="I_loginfail" style="display: none;"><div id="I_loginfailtext"></div><a class="C_bRepeat" href="javascript:LBI_user.modal(1)">try again</a><a class="C_bCancel" href="javascript:LBI_user.modal(0)">cancel</a><div class="forgot"><a href="http://www.cplusplus.com/user/access.cgi?w=lostpass">forgot your password?</a></div></div><div class="close"><a href="javascript:LBI_user.modal(0)" title="cancel log in"><span></span></a></div></div></div>
+</div>
+</div>
+<div id="I_mid">
+<div id="I_wrap">
+<div id="I_minheight" style="height: 809px;"></div>
+<div id="I_main">
+<div class="C_support">
+<div id="div-gpt-ad-1473193443042-0" style="height:90px; width:728px;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1473193443042-0'); });
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=244838556611571&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809080&amp;sc=0&amp;sfv=1-0-5&amp;iu_parts=32882001%2CL&amp;enc_prev_ius=%2F0%2F1&amp;prev_iu_szs=728x90&amp;cookie_enabled=1&amp;lmt=1386155017&amp;dt=1482555612675&amp;cc=7&amp;frm=20&amp;biw=1920&amp;bih=939&amp;oid=3&amp;adxs=0&amp;adys=0&amp;adks=587396845&amp;gut=v2&amp;ifi=1&amp;u_tz=480&amp;u_his=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_nplug=4&amp;u_nmime=5&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fwww.cplusplus.com%2Freference%2Falgorithm%2Fsort%2F&amp;ref=http%3A%2F%2Fwww.cc.ntut.edu.tw%2F~yccheng%2Foop2016s%2FOOP.html&amp;dssz=6&amp;icsg=58&amp;std=0&amp;csl=86&amp;vrg=107&amp;vrp=107&amp;ga_vid=1067966157.1477401271&amp;ga_sid=1482555216&amp;ga_hid=655282742&amp;ga_fc=true" id="sae-script-1"></script>
+</div>
+</div>
+<div id="I_content">
+<div class="C_doc">
+<div id="I_type">function template
+</div>
+<div id="I_file">&lt;algorithm&gt;
+</div>
+<h1><span class="namespace" title="namespace std">std::</span>sort</h1>
+<div class="C_prototype"><table><tbody><tr class="odd"><th>default (1)</th><td><pre>template &lt;class RandomAccessIterator&gt;
+  void sort (RandomAccessIterator first, RandomAccessIterator last);
+</pre></td></tr><tr class="even"><th>custom (2)</th><td><pre>template &lt;class RandomAccessIterator, class Compare&gt;
+  void sort (RandomAccessIterator first, RandomAccessIterator last, Compare comp);</pre></td></tr></tbody></table></div><div id="I_description">Sort elements in range</div>
+<section id="description">
+Sorts the elements in the range <code>[first,last)</code> into ascending order.<br>
+<br>
+The elements are compared using <code>operator&lt;</code> for the first version, and <var>comp</var> for the second.<br>
+<br>
+Equivalent elements are not guaranteed to keep their original relative order (see <samp><a href="http://www.cplusplus.com/stable_sort">stable_sort</a></samp>).<br>
+</section>
+<br>
+<section id="parameters">
+<h3>Parameters</h3>
+<dl>
+<dt>first, last</dt>
+<dd><a href="http://www.cplusplus.com/RandomAccessIterator">Random-access iterators</a> to the initial and final positions of the sequence to be sorted. The range used is <code>[first,last)</code>, which contains all the elements between <var>first</var> and <var>last</var>, including the element pointed by <var>first</var> but not the element pointed by <var>last</var>.<br>
+<samp>RandomAccessIterator</samp> shall point to a type for which <samp><a href="http://www.cplusplus.com/swap">swap</a></samp> is properly defined and which is both <i><a href="http://www.cplusplus.com/is_move_constructible">move-constructible</a></i> and <i><a href="http://www.cplusplus.com/is_move_assignable">move-assignable</a></i>.<br>
+</dd>
+<dt>comp</dt>
+<dd>Binary function that accepts two elements in the range as arguments, and returns a value convertible to <code>bool</code>. The value returned indicates whether the element passed as first argument is considered to go before the second in the specific <i>strict weak ordering</i> it defines.<br>
+The function shall not modify any of its arguments.<br>
+This can either be a function pointer or a function object.<br>
+</dd>
+</dl>
+</section>
+<br>
+<section id="return">
+<h3>Return value</h3>
+none<br>
+</section>
+<br>
+<section id="example">
+<h3>Example</h3>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br></code></pre></td>
+<td class="source"><pre><code><cite>// sort algorithm example</cite>
+<dfn>#include &lt;iostream&gt;     </dfn><cite>// std::cout</cite>
+<dfn>#include &lt;algorithm&gt;    </dfn><cite>// std::sort</cite>
+<dfn>#include &lt;vector&gt;       </dfn><cite>// std::vector</cite>
+
+<var>bool</var> myfunction (<var>int</var> i,<var>int</var> j) { <var>return</var> (i&lt;j); }
+
+<var>struct</var> myclass {
+  <var>bool</var> <var>operator</var>() (<var>int</var> i,<var>int</var> j) { <var>return</var> (i&lt;j);}
+} myobject;
+
+<var>int</var> main () {
+  <var>int</var> myints[] = {32,71,12,45,26,80,53,33};
+  std::vector&lt;<var>int</var>&gt; myvector (myints, myints+8);               <cite>// 32 71 12 45 26 80 53 33</cite>
+
+  <cite>// using default comparison (operator &lt;):</cite>
+  std::sort (myvector.begin(), myvector.begin()+4);           <cite>//(12 32 45 71)26 80 53 33</cite>
+
+  <cite>// using function as comp</cite>
+  std::sort (myvector.begin()+4, myvector.end(), myfunction); <cite>// 12 32 45 71(26 33 53 80)</cite>
+
+  <cite>// using object as comp</cite>
+  std::sort (myvector.begin(), myvector.end(), myobject);     <cite>//(12 26 32 33 45 53 71 80)</cite>
+
+  <cite>// print out content:</cite>
+  std::cout &lt;&lt; <kbd>"myvector contains:"</kbd>;
+  <var>for</var> (std::vector&lt;<var>int</var>&gt;::iterator it=myvector.begin(); it!=myvector.end(); ++it)
+    std::cout &lt;&lt; <kbd>' '</kbd> &lt;&lt; *it;
+  std::cout &lt;&lt; <kbd>'\n'</kbd>;
+
+  <var>return</var> 0;
+}</code></pre></td><td class="C_btnholder"><div class="C_shell"><div class="inner"><div class="btn trans_half"><a href="http://www.cplusplus.com/reference/algorithm/sort/#" title="Open C++ Shell (in a new window)" target="_top"><span class="C_ico settings"></span> Edit &amp; Run</a></div></div></div></td></tr></tbody></table></div>
+<br>
+<br>
+Output:<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="output"><pre><samp>myvector contains: 12 26 32 33 45 53 71 80
+</samp></pre></td></tr></tbody></table></div>
+</section>
+<br>
+<section id="complexity">
+<h3>Complexity</h3>
+On average, linearithmic in the <a href="http://www.cplusplus.com/distance">distance</a> between <var>first</var> and <var>last</var>: Performs approximately <code>N*log<sub>2</sub>(N)</code> (where <var>N</var> is this distance) comparisons of elements, and up to that many element swaps (or moves).<br>
+</section>
+<br>
+<section id="access">
+<h3>Data races</h3>
+The objects in the range <code>[first,last)</code> are modified.<br>
+</section>
+<br>
+<section id="exceptions">
+<h3>Exceptions</h3>
+Throws if any of the element comparisons, the element swaps (or moves) or the operations on iterators throws.<br>
+Note that invalid arguments cause <i>undefined behavior</i>.<br>
+</section>
+<br>
+<section id="see">
+<h3>See also</h3>
+<dl class="links"><dt><a href="http://www.cplusplus.com/reference/algorithm/stable_sort/"><b>stable_sort</b></a></dt><dd>Sort elements preserving order of equivalents <span class="typ">(function template
+)</span></dd></dl><dl class="links"><dt><a href="http://www.cplusplus.com/reference/algorithm/partial_sort/"><b>partial_sort</b></a></dt><dd>Partially sort elements in range <span class="typ">(function template
+)</span></dd></dl><dl class="links"><dt><a href="http://www.cplusplus.com/reference/algorithm/search/"><b>search</b></a></dt><dd>Search range for subsequence <span class="typ">(function template
+)</span></dd></dl><dl class="links"><dt><a href="http://www.cplusplus.com/reference/algorithm/reverse/"><b>reverse</b></a></dt><dd>Reverse range <span class="typ">(function template
+)</span></dd></dl>
+</section></div><div id="CH_bb"></div></div>
+</div>
+<div id="I_nav">
+<div class="sect root">
+<h3><b><a href="http://www.cplusplus.com/">C++</a></b></h3>
+<ul>
+<li class="folder info"><a href="http://www.cplusplus.com/info/">Information</a></li>
+<li class="folder doc"><a href="http://www.cplusplus.com/doc/">Tutorials</a></li>
+<li class="folder selected reference"><a href="http://www.cplusplus.com/reference/">Reference</a></li>
+<li class="folder articles"><a href="http://www.cplusplus.com/articles/">Articles</a></li>
+<li class="folder forum"><a href="http://www.cplusplus.com/forum/">Forum</a></li>
+</ul>
+</div>
+<div class="C_BoxLabels C_BoxSort sect" id="reference_box">
+<h3><div class="toggle_on" title="Sort alphabetically"></div><b><a href="http://www.cplusplus.com/reference/">Reference</a></b></h3>
+<ul style="display: block;">
+<li class="C_Collapsable collapsed"><div class="pl"></div><h4><a href="http://www.cplusplus.com/reference/clibrary/">C library:</a></h4><div class="effect_height" style="height: 0px;"><ul>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cassert/"><span>&lt;cassert&gt; (assert.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cctype/"><span>&lt;cctype&gt; (ctype.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cerrno/"><span>&lt;cerrno&gt; (errno.h)</span></a></li>
+<li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cfenv/"><span>&lt;cfenv&gt; (fenv.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cfloat/"><span>&lt;cfloat&gt; (float.h)</span></a></li>
+<li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cinttypes/"><span>&lt;cinttypes&gt; (inttypes.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ciso646/"><span>&lt;ciso646&gt; (iso646.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/climits/"><span>&lt;climits&gt; (limits.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/clocale/"><span>&lt;clocale&gt; (locale.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cmath/"><span>&lt;cmath&gt; (math.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/csetjmp/"><span>&lt;csetjmp&gt; (setjmp.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/csignal/"><span>&lt;csignal&gt; (signal.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdarg/"><span>&lt;cstdarg&gt; (stdarg.h)</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdbool/"><span>&lt;cstdbool&gt; (stdbool.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstddef/"><span>&lt;cstddef&gt; (stddef.h)</span></a></li>
+<li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdint/"><span>&lt;cstdint&gt; (stdint.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdio/"><span>&lt;cstdio&gt; (stdio.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdlib/"><span>&lt;cstdlib&gt; (stdlib.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstring/"><span>&lt;cstring&gt; (string.h)</span></a></li>
+<li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ctgmath/"><span>&lt;ctgmath&gt; (tgmath.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ctime/"><span>&lt;ctime&gt; (time.h)</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cuchar/"><span>&lt;cuchar&gt; (uchar.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cwchar/"><span>&lt;cwchar&gt; (wchar.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/cwctype/"><span>&lt;cwctype&gt; (wctype.h)</span></a></li>
+</ul></div></li>
+<li class="C_Collapsable collapsed"><div class="pl"></div><h4><a href="http://www.cplusplus.com/reference/stl/">Containers:</a></h4><div class="effect_height" style="height: 0px;"><ul>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/array/"><span>&lt;array&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/deque/"><span>&lt;deque&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/forward_list/"><span>&lt;forward_list&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/list/"><span>&lt;list&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/map/"><span>&lt;map&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/queue/"><span>&lt;queue&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/set/"><span>&lt;set&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/stack/"><span>&lt;stack&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/unordered_map/"><span>&lt;unordered_map&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/unordered_set/"><span>&lt;unordered_set&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/vector/"><span>&lt;vector&gt;</span></a></li>
+</ul></div></li>
+<li class="C_Collapsable collapsed"><div class="pl"></div><h4><a href="http://www.cplusplus.com/reference/iolibrary/">Input/Output:</a></h4><div class="effect_height" style="height: 0px;"><ul>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/fstream/"><span>&lt;fstream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iomanip/"><span>&lt;iomanip&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ios/"><span>&lt;ios&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iosfwd/"><span>&lt;iosfwd&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iostream/"><span>&lt;iostream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/istream/"><span>&lt;istream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ostream/"><span>&lt;ostream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/sstream/"><span>&lt;sstream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/streambuf/"><span>&lt;streambuf&gt;</span></a></li>
+</ul></div></li>
+<li class="C_Collapsable collapsed"><div class="pl"></div><h4><a href="http://www.cplusplus.com/reference/multithreading/">Multi-threading:</a></h4><div class="effect_height" style="height: 0px;"><ul>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/atomic/"><span>&lt;atomic&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/condition_variable/"><span>&lt;condition_variable&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/future/"><span>&lt;future&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/mutex/"><span>&lt;mutex&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/thread/"><span>&lt;thread&gt;</span></a></li>
+</ul></div></li>
+<li class="C_Collapsable"><div class="mn"></div><h4><a href="http://www.cplusplus.com/reference/std/">Other:</a></h4><div class="effect_height" style="height: 416px;"><ul>
+<li class="cpp98 cpp11 selected folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/algorithm/"><span>&lt;algorithm&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/bitset/"><span>&lt;bitset&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/chrono/"><span>&lt;chrono&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/codecvt/"><span>&lt;codecvt&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/complex/"><span>&lt;complex&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/exception/"><span>&lt;exception&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/functional/"><span>&lt;functional&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/initializer_list/"><span>&lt;initializer_list&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iterator/"><span>&lt;iterator&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/limits/"><span>&lt;limits&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/locale/"><span>&lt;locale&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/memory/"><span>&lt;memory&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/new/"><span>&lt;new&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/numeric/"><span>&lt;numeric&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/random/"><span>&lt;random&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ratio/"><span>&lt;ratio&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/regex/"><span>&lt;regex&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/stdexcept/"><span>&lt;stdexcept&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/string/"><span>&lt;string&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/system_error/"><span>&lt;system_error&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/tuple/"><span>&lt;tuple&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/typeindex/"><span>&lt;typeindex&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/typeinfo/"><span>&lt;typeinfo&gt;</span></a></li>
+<li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/type_traits/"><span>&lt;type_traits&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/utility/"><span>&lt;utility&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/valarray/"><span>&lt;valarray&gt;</span></a></li>
+</ul></div></li>
+</ul>
+<ul style="display: none;"><li class="cpp98 cpp11 selected folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/algorithm/"><span>&lt;algorithm&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/array/"><span>&lt;array&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/atomic/"><span>&lt;atomic&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/bitset/"><span>&lt;bitset&gt;</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cassert/"><span>&lt;cassert&gt; (assert.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cctype/"><span>&lt;cctype&gt; (ctype.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cerrno/"><span>&lt;cerrno&gt; (errno.h)</span></a></li><li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cfenv/"><span>&lt;cfenv&gt; (fenv.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cfloat/"><span>&lt;cfloat&gt; (float.h)</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/chrono/"><span>&lt;chrono&gt;</span></a></li><li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cinttypes/"><span>&lt;cinttypes&gt; (inttypes.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ciso646/"><span>&lt;ciso646&gt; (iso646.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/climits/"><span>&lt;climits&gt; (limits.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/clocale/"><span>&lt;clocale&gt; (locale.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cmath/"><span>&lt;cmath&gt; (math.h)</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/codecvt/"><span>&lt;codecvt&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/complex/"><span>&lt;complex&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/condition_variable/"><span>&lt;condition_variable&gt;</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/csetjmp/"><span>&lt;csetjmp&gt; (setjmp.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/csignal/"><span>&lt;csignal&gt; (signal.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdarg/"><span>&lt;cstdarg&gt; (stdarg.h)</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdbool/"><span>&lt;cstdbool&gt; (stdbool.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstddef/"><span>&lt;cstddef&gt; (stddef.h)</span></a></li><li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdint/"><span>&lt;cstdint&gt; (stdint.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdio/"><span>&lt;cstdio&gt; (stdio.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstdlib/"><span>&lt;cstdlib&gt; (stdlib.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cstring/"><span>&lt;cstring&gt; (string.h)</span></a></li><li class="c99 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ctgmath/"><span>&lt;ctgmath&gt; (tgmath.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ctime/"><span>&lt;ctime&gt; (time.h)</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cuchar/"><span>&lt;cuchar&gt; (uchar.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/cwchar/"><span>&lt;cwchar&gt; (wchar.h)</span></a></li><li class="c90 c99 arm cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/cwctype/"><span>&lt;cwctype&gt; (wctype.h)</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/deque/"><span>&lt;deque&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/exception/"><span>&lt;exception&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/forward_list/"><span>&lt;forward_list&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/fstream/"><span>&lt;fstream&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/functional/"><span>&lt;functional&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/future/"><span>&lt;future&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/initializer_list/"><span>&lt;initializer_list&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iomanip/"><span>&lt;iomanip&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ios/"><span>&lt;ios&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iosfwd/"><span>&lt;iosfwd&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iostream/"><span>&lt;iostream&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/istream/"><span>&lt;istream&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/iterator/"><span>&lt;iterator&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/limits/"><span>&lt;limits&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/list/"><span>&lt;list&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/locale/"><span>&lt;locale&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/map/"><span>&lt;map&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/memory/"><span>&lt;memory&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/mutex/"><span>&lt;mutex&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/new/"><span>&lt;new&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/numeric/"><span>&lt;numeric&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ostream/"><span>&lt;ostream&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/queue/"><span>&lt;queue&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/random/"><span>&lt;random&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/ratio/"><span>&lt;ratio&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/regex/"><span>&lt;regex&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/set/"><span>&lt;set&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/sstream/"><span>&lt;sstream&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/stack/"><span>&lt;stack&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/stdexcept/"><span>&lt;stdexcept&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/streambuf/"><span>&lt;streambuf&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/string/"><span>&lt;string&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/system_error/"><span>&lt;system_error&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/thread/"><span>&lt;thread&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/tuple/"><span>&lt;tuple&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/type_traits/"><span>&lt;type_traits&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/typeindex/"><span>&lt;typeindex&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/typeinfo/"><span>&lt;typeinfo&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/unordered_map/"><span>&lt;unordered_map&gt;</span></a></li><li class="cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/unordered_set/"><span>&lt;unordered_set&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="mid"></div><a href="http://www.cplusplus.com/reference/utility/"><span>&lt;utility&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/valarray/"><span>&lt;valarray&gt;</span></a></li><li class="cpp98 cpp11 folder"><div class="label"><div></div></div><div class="last"></div><a href="http://www.cplusplus.com/reference/vector/"><span>&lt;vector&gt;</span></a></li></ul></div>
+<div class="C_BoxLabels C_BoxSort sect cpp98 cpp11" id="algorithm_box">
+<h3><div class="toggle_on" title="Sort alphabetically"></div><b><a href="http://www.cplusplus.com/reference/algorithm/">&lt;algorithm&gt;</a></b></h3>
+<ul style="display: block;">
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/adjacent_find/"><span>adjacent_find</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/all_of/"><span>all_of</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/any_of/"><span>any_of</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/binary_search/"><span>binary_search</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy/"><span>copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy_backward/"><span>copy_backward</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy_if/"><span>copy_if</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy_n/"><span>copy_n</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/count/"><span>count</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/count_if/"><span>count_if</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/equal/"><span>equal</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/equal_range/"><span>equal_range</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/fill/"><span>fill</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/fill_n/"><span>fill_n</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find/"><span>find</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_end/"><span>find_end</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_first_of/"><span>find_first_of</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_if/"><span>find_if</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_if_not/"><span>find_if_not</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/for_each/"><span>for_each</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/generate/"><span>generate</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/generate_n/"><span>generate_n</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/includes/"><span>includes</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/inplace_merge/"><span>inplace_merge</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_heap/"><span>is_heap</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_heap_until/"><span>is_heap_until</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_partitioned/"><span>is_partitioned</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_permutation/"><span>is_permutation</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_sorted/"><span>is_sorted</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_sorted_until/"><span>is_sorted_until</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/iter_swap/"><span>iter_swap</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/lexicographical_compare/"><span>lexicographical_compare</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/lower_bound/"><span>lower_bound</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/make_heap/"><span>make_heap</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/max/"><span>max</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/max_element/"><span>max_element</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/merge/"><span>merge</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/min/"><span>min</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/minmax/"><span>minmax</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/minmax_element/"><span>minmax_element</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/min_element/"><span>min_element</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/mismatch/"><span>mismatch</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/move/"><span>move</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/move_backward/"><span>move_backward</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/next_permutation/"><span>next_permutation</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/none_of/"><span>none_of</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/nth_element/"><span>nth_element</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partial_sort/"><span>partial_sort</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partial_sort_copy/"><span>partial_sort_copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partition/"><span>partition</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partition_copy/"><span>partition_copy</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partition_point/"><span>partition_point</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/pop_heap/"><span>pop_heap</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/prev_permutation/"><span>prev_permutation</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/push_heap/"><span>push_heap</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/random_shuffle/"><span>random_shuffle</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove/"><span>remove</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove_copy/"><span>remove_copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove_copy_if/"><span>remove_copy_if</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove_if/"><span>remove_if</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace/"><span>replace</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace_copy/"><span>replace_copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace_copy_if/"><span>replace_copy_if</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace_if/"><span>replace_if</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/reverse/"><span>reverse</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/reverse_copy/"><span>reverse_copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/rotate/"><span>rotate</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/rotate_copy/"><span>rotate_copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/search/"><span>search</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/search_n/"><span>search_n</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_difference/"><span>set_difference</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_intersection/"><span>set_intersection</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_symmetric_difference/"><span>set_symmetric_difference</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_union/"><span>set_union</span></a></li>
+<li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/shuffle/"><span>shuffle</span></a></li>
+<li class="cpp98 cpp11 selected"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/sort/"><span>sort</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/sort_heap/"><span>sort_heap</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/stable_partition/"><span>stable_partition</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/stable_sort/"><span>stable_sort</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/swap/"><span>swap</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/swap_ranges/"><span>swap_ranges</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/transform/"><span>transform</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/unique/"><span>unique</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/unique_copy/"><span>unique_copy</span></a></li>
+<li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/upper_bound/"><span>upper_bound</span></a></li>
+</ul>
+<ul style="display: none;"><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/adjacent_find/"><span>adjacent_find</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/all_of/"><span>all_of</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/any_of/"><span>any_of</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/binary_search/"><span>binary_search</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy/"><span>copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy_backward/"><span>copy_backward</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy_if/"><span>copy_if</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/copy_n/"><span>copy_n</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/count/"><span>count</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/count_if/"><span>count_if</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/equal/"><span>equal</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/equal_range/"><span>equal_range</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/fill/"><span>fill</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/fill_n/"><span>fill_n</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find/"><span>find</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_end/"><span>find_end</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_first_of/"><span>find_first_of</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_if/"><span>find_if</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/find_if_not/"><span>find_if_not</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/for_each/"><span>for_each</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/generate/"><span>generate</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/generate_n/"><span>generate_n</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/includes/"><span>includes</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/inplace_merge/"><span>inplace_merge</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_heap/"><span>is_heap</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_heap_until/"><span>is_heap_until</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_partitioned/"><span>is_partitioned</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_permutation/"><span>is_permutation</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_sorted/"><span>is_sorted</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/is_sorted_until/"><span>is_sorted_until</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/iter_swap/"><span>iter_swap</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/lexicographical_compare/"><span>lexicographical_compare</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/lower_bound/"><span>lower_bound</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/make_heap/"><span>make_heap</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/max/"><span>max</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/max_element/"><span>max_element</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/merge/"><span>merge</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/min/"><span>min</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/min_element/"><span>min_element</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/minmax/"><span>minmax</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/minmax_element/"><span>minmax_element</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/mismatch/"><span>mismatch</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/move/"><span>move</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/move_backward/"><span>move_backward</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/next_permutation/"><span>next_permutation</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/none_of/"><span>none_of</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/nth_element/"><span>nth_element</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partial_sort/"><span>partial_sort</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partial_sort_copy/"><span>partial_sort_copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partition/"><span>partition</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partition_copy/"><span>partition_copy</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/partition_point/"><span>partition_point</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/pop_heap/"><span>pop_heap</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/prev_permutation/"><span>prev_permutation</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/push_heap/"><span>push_heap</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/random_shuffle/"><span>random_shuffle</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove/"><span>remove</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove_copy/"><span>remove_copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove_copy_if/"><span>remove_copy_if</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/remove_if/"><span>remove_if</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace/"><span>replace</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace_copy/"><span>replace_copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace_copy_if/"><span>replace_copy_if</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/replace_if/"><span>replace_if</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/reverse/"><span>reverse</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/reverse_copy/"><span>reverse_copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/rotate/"><span>rotate</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/rotate_copy/"><span>rotate_copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/search/"><span>search</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/search_n/"><span>search_n</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_difference/"><span>set_difference</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_intersection/"><span>set_intersection</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_symmetric_difference/"><span>set_symmetric_difference</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/set_union/"><span>set_union</span></a></li><li class="cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/shuffle/"><span>shuffle</span></a></li><li class="cpp98 cpp11 selected"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/sort/"><span>sort</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/sort_heap/"><span>sort_heap</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/stable_partition/"><span>stable_partition</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/stable_sort/"><span>stable_sort</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/swap/"><span>swap</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/swap_ranges/"><span>swap_ranges</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/transform/"><span>transform</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/unique/"><span>unique</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/unique_copy/"><span>unique_copy</span></a></li><li class="cpp98 cpp11"><div class="label"><div></div></div><a href="http://www.cplusplus.com/reference/algorithm/upper_bound/"><span>upper_bound</span></a></li></ul></div>
+<div id="I_subnav"></div>
+<div class="C_ad234">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7688470879129516";
+google_ad_slot = "7445514729";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></div>
+<div id="I_midclear"></div>
+</div>
+</div>
+<div id="I_bottom">
+<div id="I_footer">
+	<a href="http://www.cplusplus.com/">Home page</a> | <a href="http://www.cplusplus.com/privacy.do">Privacy policy</a><br>© cplusplus.com, 2000-2016 - All rights reserved - <i>v3.1</i><br><a href="http://www.cplusplus.com/contact.do?referrer=www.cplusplus.com%2Freference%2Falgorithm%2Fsort%2F">Spotted an error? contact us</a>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+ onSession ( function(us) {
+		el=document.getElementById('CH_bb'); el.innerHTML='';
+		if (us.auth(4096)) {
+			
+			el.appendChild(btn('Edit Page','Edit Page','edit','/reference/edit.cgi?a=algorithm+sort'));
+			el.appendChild(btn('Delete Page','Delete Page','delete','javascript:docdel()'));
+		}
+	});
+	function docdel() { if (confirm('WARNING: You are about to delete this page. Confirm?')) window.location='/reference/delete.cgi?a=algorithm+sort'; }
+	ready();
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-521783-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+//-->
+</script>
+
+<script>
+(function(){
+  // mini cookie-consent code (c) Juan Soulie, 2016
+  var s ='consent=cookie';
+  var e = document.createElement('div');
+  e.innerHTML = '<div style="background:#eed;padding:10px;margin:0;text-align:center;border-bottom:1px solid #446"><span style="color:#210;font-weight:bold">This website uses cookies. By continuing, you give permission to deploy cookies, as detailed in our <a href="/privacy.do">privacy policy</a>.</span> <span style="margin-left:10px;border-radius:5px;padding:1px 10px;background:#bcd;border:1px solid #789;cursor:pointer">ok</span></div>';
+  if (document.cookie.indexOf(s)!==-1) return;
+  var b = document.getElementsByTagName('body')[0];
+  b.insertBefore(e,b.firstChild);
+  var x = function() { document.cookie = s+'; path=/'; e.parentNode.removeChild(e); };
+  e.addEventListener('click',x);
+  document.addEventListener('scroll',x);
+})();
+</script>
+
+
+</body></html>
