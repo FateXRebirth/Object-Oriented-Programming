@@ -1,0 +1,189 @@
+# depslib dependency file v1.0
+1442203630 source:d:\posd_hw7\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+
+1021612118 d:\posd_hw7\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\posd_hw7\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\posd_hw7\cppunitlite\simplestring.h
+
+1021612138 d:\posd_hw7\cppunitlite\testresult.h
+
+1021612138 d:\posd_hw7\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\posd_hw7\cppunitlite\testregistry.h
+
+1441788843 source:d:\posd_hw7\cpptest2\stack.cpp
+	"Stack.h"
+
+1441790743 d:\posd_hw7\cpptest2\stack.h
+
+1442203624 source:d:\posd_hw7\cpptest2\unittest.cpp
+	"Stack.h"
+	"cppunitlite\TestHarness.h"
+
+1021612118 d:\posd_hw7\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\posd_hw7\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\posd_hw7\cpptest2\cppunitlite\simplestring.h
+
+1021612138 d:\posd_hw7\cpptest2\cppunitlite\testresult.h
+
+1021612138 d:\posd_hw7\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\posd_hw7\cpptest2\cppunitlite\testregistry.h
+
+1441788843 source:c:\users\anfa\desktop\oophw1\cpptest2\stack.cpp
+	"Stack.h"
+
+1441790743 c:\users\anfa\desktop\oophw1\cpptest2\stack.h
+
+1456895011 source:c:\users\anfa\desktop\oophw1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\testresult.h
+
+1021612138 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\testregistry.h
+
+1456892570 source:c:\users\anfa\desktop\oophw1\cpptest2\unittest.cpp
+	"Stack.h"
+	"cppunitlite\TestHarness.h"
+	<iostream>
+
+1456903972 source:c:\users\anfa\desktop\oophw1\oophw1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\testresult.h
+
+1021612138 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\testregistry.h
+
+1456904855 source:d:\homework1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 d:\homework1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\homework1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\homework1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 d:\homework1\cpptest2\cppunitlite\testresult.h
+
+1021612138 d:\homework1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\homework1\cpptest2\cppunitlite\testregistry.h
+
+1477402378 source:c:\users\fate\desktop\oop\homework1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\testresult.h
+
+1021612138 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\testregistry.h
+
+1485134789 source:z:\desktop\oop\homework8\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+	"test.h"
+
+1484412277 z:\desktop\oop\homework8\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1484412277 z:\desktop\oop\homework8\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1484412277 z:\desktop\oop\homework8\cppunitlite\simplestring.h
+
+1484412277 z:\desktop\oop\homework8\cppunitlite\testresult.h
+
+1484412277 z:\desktop\oop\homework8\cppunitlite\failure.h
+	"SimpleString.h"
+
+1484412277 z:\desktop\oop\homework8\cppunitlite\testregistry.h
+
+1485148098 z:\desktop\oop\homework8\test.h
+	<vector>
+	<list>
+	<iostream>
+	<algorithm>
+
