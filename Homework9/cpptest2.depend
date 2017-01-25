@@ -1,0 +1,283 @@
+# depslib dependency file v1.0
+1442203630 source:d:\posd_hw7\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+
+1021612118 d:\posd_hw7\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\posd_hw7\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\posd_hw7\cppunitlite\simplestring.h
+
+1021612138 d:\posd_hw7\cppunitlite\testresult.h
+
+1021612138 d:\posd_hw7\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\posd_hw7\cppunitlite\testregistry.h
+
+1441788843 source:d:\posd_hw7\cpptest2\stack.cpp
+	"Stack.h"
+
+1441790743 d:\posd_hw7\cpptest2\stack.h
+
+1442203624 source:d:\posd_hw7\cpptest2\unittest.cpp
+	"Stack.h"
+	"cppunitlite\TestHarness.h"
+
+1021612118 d:\posd_hw7\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\posd_hw7\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\posd_hw7\cpptest2\cppunitlite\simplestring.h
+
+1021612138 d:\posd_hw7\cpptest2\cppunitlite\testresult.h
+
+1021612138 d:\posd_hw7\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\posd_hw7\cpptest2\cppunitlite\testregistry.h
+
+1441788843 source:c:\users\anfa\desktop\oophw1\cpptest2\stack.cpp
+	"Stack.h"
+
+1441790743 c:\users\anfa\desktop\oophw1\cpptest2\stack.h
+
+1456895011 source:c:\users\anfa\desktop\oophw1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\testresult.h
+
+1021612138 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 c:\users\anfa\desktop\oophw1\cpptest2\cppunitlite\testregistry.h
+
+1456892570 source:c:\users\anfa\desktop\oophw1\cpptest2\unittest.cpp
+	"Stack.h"
+	"cppunitlite\TestHarness.h"
+	<iostream>
+
+1456903972 source:c:\users\anfa\desktop\oophw1\oophw1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\testresult.h
+
+1021612138 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 c:\users\anfa\desktop\oophw1\oophw1\cpptest2\cppunitlite\testregistry.h
+
+1456904855 source:d:\homework1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 d:\homework1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\homework1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\homework1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 d:\homework1\cpptest2\cppunitlite\testresult.h
+
+1021612138 d:\homework1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\homework1\cpptest2\cppunitlite\testregistry.h
+
+1477402378 source:c:\users\fate\desktop\oop\homework1\cpptest2\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+
+1021612118 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\simplestring.h
+
+1021612138 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\testresult.h
+
+1021612138 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 c:\users\fate\desktop\oop\homework1\cpptest2\cppunitlite\testregistry.h
+
+1485148817 source:z:\desktop\oop\homework7\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<cmath>
+	"ConvexPolygon.h"
+	"Vector.h"
+	"ProductDot.h"
+	"getVector.h"
+
+1484412277 z:\desktop\oop\homework7\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1484412277 z:\desktop\oop\homework7\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1484412277 z:\desktop\oop\homework7\cppunitlite\simplestring.h
+
+1484412277 z:\desktop\oop\homework7\cppunitlite\testresult.h
+
+1484412277 z:\desktop\oop\homework7\cppunitlite\failure.h
+	"SimpleString.h"
+
+1484412277 z:\desktop\oop\homework7\cppunitlite\testregistry.h
+
+1485149029 z:\desktop\oop\homework7\convexpolygon.h
+	"Vector.h"
+	"triangle_area.h"
+	"centroid.h"
+	"ProductDot.h"
+	<string>
+	<algorithm>
+
+1485148817 z:\desktop\oop\homework7\vector.h
+	<string>
+	<math.h>
+	<iostream>
+	<sstream>
+
+1485148817 z:\desktop\oop\homework7\triangle_area.h
+	"Vector.h"
+	<math.h>
+
+1485148939 z:\desktop\oop\homework7\centroid.h
+	<math.h>
+
+1485148817 z:\desktop\oop\homework7\productdot.h
+	<string>
+	"Vector.h"
+	<algorithm>
+
+1485148817 z:\desktop\oop\homework7\getvector.h
+	<string>
+	<sstream>
+
+1485332692 source:z:\desktop\oop\homework9\main.cpp
+	"cppunitlite\TestHarness.h"
+	<iostream>
+	<sstream>
+	<cmath>
+	"ConvexPolygon.h"
+	"Vector.h"
+	"ProductDot.h"
+	"getVector.h"
+	"Circle.h"
+
+1484412277 z:\desktop\oop\homework9\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1484412277 z:\desktop\oop\homework9\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1484412277 z:\desktop\oop\homework9\cppunitlite\simplestring.h
+
+1484412277 z:\desktop\oop\homework9\cppunitlite\testresult.h
+
+1484412277 z:\desktop\oop\homework9\cppunitlite\failure.h
+	"SimpleString.h"
+
+1484412277 z:\desktop\oop\homework9\cppunitlite\testregistry.h
+
+1485333080 z:\desktop\oop\homework9\convexpolygon.h
+	"Vector.h"
+	"triangle_area.h"
+	"centroid.h"
+	"ProductDot.h"
+	<string>
+	<sstream>
+	<algorithm>
+	"getVector.h"
+
+1485324888 z:\desktop\oop\homework9\vector.h
+	<string>
+	<math.h>
+	<iostream>
+	<sstream>
+
+1485148817 z:\desktop\oop\homework9\triangle_area.h
+	"Vector.h"
+	<math.h>
+
+1485148939 z:\desktop\oop\homework9\centroid.h
+	<math.h>
+
+1485148817 z:\desktop\oop\homework9\productdot.h
+	<string>
+	"Vector.h"
+	<algorithm>
+
+1485332789 z:\desktop\oop\homework9\getvector.h
+	<string>
+	<sstream>
+
+1485324392 z:\desktop\oop\homework9\circle.h
+	<string>
+	<sstream>
+	"getVector.h"
+

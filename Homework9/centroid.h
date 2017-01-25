@@ -1,10 +1,8 @@
-#ifndef CENT_H_INCLUDED
-#define CENT_H_INCLUDED
+#ifndef CENTROID_H_INCLUDED
+#define CENTROID_H_INCLUDED
 
 #include <math.h>
-
-const double pi = 3.14159265;
-
+/*
 Vector centroid(int n, Vector vs[]) {
   Vector a(vs[0]);
 
@@ -13,10 +11,13 @@ Vector centroid(int n, Vector vs[]) {
 
   return a/n;
 }
-
+*/
 bool zout(Vector &v1, Vector & v2) {
     return v1.component(1)*v2.component(2) >= v1.component(2)*v2.component(1);
 }
+
+
+/*
 class smallAngleInFront {
 public:
     smallAngleInFront(Vector const & cent, Vector const & refV)
@@ -36,4 +37,7 @@ private:
     Vector o, v;
 };
 
-#endif // CENT_H_INCLUDED
+*/
+
+
+#endif // CENTROID_H_INCLUDED

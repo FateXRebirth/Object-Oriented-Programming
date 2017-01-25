@@ -3,8 +3,11 @@
 
 #include <string>
 #include <sstream>
-#include "Shape.h"
-#include "../getVector.h"
+
+//#include "Shape.h"
+
+#include "getVector.h"
+
 const double PI = 3.14159265;
 class Circle /*: public Shape*/ {
 public:
@@ -17,9 +20,9 @@ public:
     Vector center() const{return c;}
     double radius() const{return r;}
 
-    std::string description() const{
+    std::string description() {
         std::stringstream ss;
-        ss << "{circle, " << c.description() << ", " << r << "}";
+        ss << "{circle, " << c.str() << ", " << r << "}";
         return ss.str();
         }
 private:
@@ -32,19 +35,35 @@ Circle getCircleFromString(string s){
     stringstream ss(s);
     char c;
     ss >> c;
+
+    //cout << c << endl;
+
     if(c!='{') throw FormatError;
     string shape, center;
     double r;
     getline(ss,shape,';');
+
+    //cout << shape << endl;
+
     if(shape != string ("circle"))
         throw FormatError;
     getline(ss,center,';');
-    Vector O = getVectorFromString(center);
+
+    //cout << center << endl;
+
+    Vector O = getVectorFromStringForCircle(center);
+
+    //cout << O.str() << endl;
+
     ss >> r >> c;
+
+    //cout << r << c << endl;
+
     if(c!='}') throw FormatError;
     if(!ss.good())
         throw FormatError;
     return Circle(O, r);
 }
+
 
 #endif // CIRCLE_H_INCLUDED
